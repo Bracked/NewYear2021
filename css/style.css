@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #ff4e2b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imgBx {
+  position: relative;
+  width: 450px;
+  height: 100%;
+  background: url(../newyear.jpg);
+  background-size: cover;
+}
+
+.countdownBx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% - 450px);
+}
+
+.countdownBx h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+  line-height: 4em;
+}
+
+.countdownBx h2 span {
+  font-size: 6em;
+  font-weight: 700;
+}
+
+.countdownBx h2 i {
+  font-style: initial;
+  color: #ff0;
+}
+
+.countdown {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countdown div {
+  position: relative;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: -25px 15px 0;
+}
+
+.countdown div::before {
+  content: 'text';
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  color: #fff;
+  font-size: 0.35em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.countdown div#day::before {
+  content: 'days';
+}
+
+.countdown div#hour::before {
+  content: 'hours';
+}
+
+.countdown div#minute::before {
+  content: 'minutes';
+}
+
+.countdown div#second::before {
+  content: 'seconds';
+}
+
+.countdown div#second, .countdown div#second::before {
+  color: #ff0;
+}
+
+@media (max-width: 991px) {
+  .imgBx {
+    display: none;
+  }
+  .countdownBx {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .countdownBx h2 {
+    font-size: 1.1em;
+  }
+  .countdownBx .countdown div {
+    font-size: 2em;
+  }
+}
